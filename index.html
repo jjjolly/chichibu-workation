@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus and Away at Chichibu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #e0e0e0;
+        }
+        
+        .day-section {
+            background: rgba(40, 40, 40, 0.8);
+            backdrop-filter: blur(10px);
+            border-left: 4px solid #a78b5f;
+        }
+        
+        .spot-card {
+            background: rgba(50, 50, 50, 0.6);
+            border: 1px solid rgba(167, 139, 95, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .spot-card:hover {
+            background: rgba(60, 60, 60, 0.8);
+            border-color: rgba(167, 139, 95, 0.6);
+            transform: translateX(4px);
+        }
+        
+        .map-btn {
+            background: linear-gradient(135deg, #a78b5f 0%, #8a6f47 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .map-btn:hover {
+            background: linear-gradient(135deg, #b89b6f 0%, #9a7f57 100%);
+            transform: scale(1.05);
+        }
+        
+        .time-badge {
+            background: rgba(167, 139, 95, 0.2);
+            color: #d4b896;
+            border: 1px solid rgba(167, 139, 95, 0.4);
+        }
+        
+        .selection-badge {
+            background: rgba(220, 90, 60, 0.2);
+            color: #ff9980;
+            border: 1px solid rgba(220, 90, 60, 0.4);
+        }
+        
+        h1 {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .concept-tag {
+            background: rgba(167, 139, 95, 0.15);
+            border: 1px solid rgba(167, 139, 95, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8 px-4">
+    <div class="max-w-2xl mx-auto">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-amber-100">Focus and Away at Chichibu</h1>
+        </header>
+
+        <!-- Day 1 -->
+        <section class="day-section rounded-lg p-6 mb-8 shadow-2xl">
+            <h2 class="text-3xl font-bold mb-2 text-amber-100">Day 1</h2>
+            <p class="text-lg text-amber-200 mb-6 italic">Focus & Deep Night</p>
+            
+            <!-- Focus Time -->
+            <div class="spot-card rounded-lg p-5 mb-4">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="time-badge px-3 py-1 rounded-full text-sm font-semibold">10:00 - 19:00</span>
+                    <span class="text-xs text-gray-500">FOCUS</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-amber-50">Focus Time</h3>
+                <p class="text-sm text-gray-400 mb-4">Deep dive in quiet space</p>
+                <a href="https://maps.app.goo.gl/vZvudrqJWpr6QpAt6" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium">
+                    📍 Map
+                </a>
+            </div>
+            
+            <!-- Lunch Time -->
+            <div class="mb-6">
+                <div class="spot-card rounded-lg p-5 mb-4">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs text-gray-500">LUNCH</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-amber-50">Lunch Time (Choose from 3)</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="selection-badge px-3 py-1 rounded-full text-xs font-semibold">SELECTION</span>
+                    </div>
+                    <div class="grid gap-2">
+                        <a href="https://maps.app.goo.gl/LCgMekFsJEGKRP839" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium text-center">
+                            📍 Hamburger
+                        </a>
+                        <a href="https://maps.app.goo.gl/a4cZYhPVuZ8ULLLB9" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium text-center">
+                            📍 Chinese Option 1
+                        </a>
+                        <a href="https://maps.app.goo.gl/fQNXTNC1ADjZtMXB9" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium text-center">
+                            📍 Chinese Option 2
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Afternoon Break -->
+            <div class="spot-card rounded-lg p-5 mb-4">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs text-gray-500">COFFEE</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-amber-50">Afternoon Break</h3>
+                <p class="text-sm text-gray-400 mb-4">A refined pause during focus time</p>
+                <a href="https://maps.app.goo.gl/h66LiZFvu9tuRRVJA" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium">
+                    📍 Map
+                </a>
+            </div>
+
+            <!-- Dinner -->
+            <div class="spot-card rounded-lg p-5 mb-4">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="time-badge px-3 py-1 rounded-full text-sm font-semibold">19:00</span>
+                    <span class="text-xs text-gray-500">DINNER</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-amber-50">Yakiniku / Hormone</h3>
+                <p class="text-sm text-gray-400 mb-4">The night's main event — Choose from 3</p>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="selection-badge px-3 py-1 rounded-full text-xs font-semibold">SELECTION</span>
+                </div>
+                <div class="grid gap-2">
+                    <a href="https://maps.app.goo.gl/zqovXn519ABuDook8" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium text-center">
+                        📍 Yakiniku Option 1
+                    </a>
+                    <a href="https://maps.app.goo.gl/9aMf5yk4VhxnbJJM6" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium text-center">
+                        📍 Yakiniku Option 2
+                    </a>
+                    <a href="https://maps.app.goo.gl/9F2g55of3r1cStig6" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium text-center">
+                        📍 Yakiniku Option 3
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stay -->
+            <div class="spot-card rounded-lg p-5">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="time-badge px-3 py-1 rounded-full text-sm font-semibold">21:30</span>
+                    <span class="text-xs text-gray-500">STAY</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-amber-50">Stay</h3>
+                <p class="text-sm text-gray-400 mb-4">Rest for the night</p>
+                <a href="https://maps.app.goo.gl/2bSmyxdfP3He8Wc8A" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium">
+                    📍 Map
+                </a>
+            </div>
+        </section>
+
+        <!-- Day 2 -->
+        <section class="day-section rounded-lg p-6 mb-8 shadow-2xl">
+            <h2 class="text-3xl font-bold mb-2 text-amber-100">Day 2</h2>
+            <p class="text-lg text-amber-200 mb-6 italic">Activity & Chill</p>
+            
+            <!-- River Challenge -->
+            <div class="spot-card rounded-lg p-5 mb-4">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs text-gray-500">ACTIVITY</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-amber-50">River Challenge</h3>
+                <p class="text-sm text-gray-400 mb-4">Freedom by the water</p>
+                <a href="https://maps.app.goo.gl/e9N26GmpczgLBAT37" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium">
+                    📍 Map
+                </a>
+            </div>
+
+            <!-- Mountain Challenge -->
+            <div class="spot-card rounded-lg p-5 mb-4">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs text-gray-500">ACTIVITY</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-amber-50">Mountain Challenge</h3>
+                <p class="text-sm text-gray-400 mb-4">The path to the summit</p>
+                <a href="https://maps.app.goo.gl/JqALmsSiWKmpEGqs8" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium">
+                    📍 Map
+                </a>
+            </div>
+
+            <!-- Final Chill -->
+            <div class="spot-card rounded-lg p-5">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs text-gray-500">CHILL</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-amber-50">Final Chill</h3>
+                <p class="text-sm text-gray-400 mb-4">End of the journey, savoring the moment</p>
+                <a href="https://maps.app.goo.gl/dVEDndfgJTQf7SE79" target="_blank" class="map-btn inline-block px-4 py-2 rounded-lg text-white text-sm font-medium">
+                    📍 Map
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-12 pb-8">
+            <p>Focus and Away at Chichibu | 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
